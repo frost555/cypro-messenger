@@ -1,0 +1,85 @@
+.dialog {
+  flex-grow: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.messages {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.message {
+  min-height: 40px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  &__author {
+    font-weight: 700;
+    color: #42648b;
+    font-size: 14px;
+    display: inline-block;
+    margin-right: 15px;
+  }
+  &__datesent {
+    color: hsla(220,8%,51%,.6);
+    font-size: 12px;
+    display: inline-block;
+  }
+
+  &__attachment {
+    color: #707885;
+    font-size: 12px;
+    cursor: pointer;
+  }
+}
+
+.message + .message {
+  margin-top: 10px;
+}
+
+.reply {
+  height: 50px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  &__input {
+    box-sizing: border-box;
+    height: 100%;
+    flex-grow: 1;
+    border: 1px solid lightgray;
+  }
+  &__submit {
+    margin-left: 10px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    height: 40px;
+    cursor: pointer;
+    border: 1px solid   hsla(213, 24%, 80%, 0.6);;
+    font-weight: 700;
+    color: #42648b;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+  &__attachments {
+    padding: 0 5px;
+    color: #707885;
+    font-size: 14px;
+  }
+}
+
+.file-upload-label {
+  margin-left: 10px;
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+  background-size: 32px;
+  background: url("../images/attach-icon.png") no-repeat;
+}
+
+.file-upload {
+  display: none;
+}

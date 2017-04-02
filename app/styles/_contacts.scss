@@ -1,0 +1,23 @@
+.contacts {
+  border-right: 1px solid lightgray;
+  flex-shrink: 0;
+  flex-basis: 200px;
+  height: 100%;
+  &__item {
+    height: 50px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  &__item--active {
+    background-color: #EAEAEA;
+  }
+  &__item + &__item {
+    border-top: 1px solid lightgray;
+  }
+  &__list {
+    border-bottom: 1px solid lightgray;
+  }
+}
